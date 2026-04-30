@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "newsheadlines"
+description = "A news headlines..."
+version = "0.0.1"
+authors = [{ name = "Theo Maillard", email = "theomaillard11@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["news", "headline", "headlines"]
+license = { file = "LICENSE.txt" }
+dependencies = [
+    "beautifulsoup4"
+]
+
+[project.urls]
+Repository = "https://github.com/..."
