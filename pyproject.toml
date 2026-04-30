@@ -4,16 +4,20 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "newsheadlines"
-description = "A news headlines..."
 version = "0.0.1"
+description = "Latest news headlines fetcher"
 authors = [{ name = "Theo Maillard", email = "theomaillard11@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.12"
-keywords = ["news", "headline", "headlines"]
-license = { file = "LICENSE.txt" }
+keywords = ["news", "headlines"]
+license = "MIT"
+license-files = [
+    "LICENSE",
+]
 dependencies = [
-    "beautifulsoup4"
+    "beautifulsoup4",
+    "requests-cache"
 ]
 
 [project.urls]
-Repository = "https://github.com/..."
+Repository = "https://github.com/theomaillard/newsheadlines"
