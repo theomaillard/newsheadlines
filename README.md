@@ -75,10 +75,10 @@ print(headline.source)
 
 ## Available sources
 
-| Key             | Source             |
-|:---------------:|:------------------:|
-| `"apnews"`      | AP News            |
-| `"bbc"`         | BBC News           |
-| `"cnn"`         | CNN                |
-| `"nyt"`         | The New York Times |
-| `"theguardian"` | The Guardian       |
+|       Key       |                          Source                           |
+| :-------------: | :-------------------------------------------------------: |
+|   `"apnews"`    |              [AP News](https://apnews.com/)               |
+|     `"bbc"`     |           [BBC News](https://www.bbc.com/news)            |
+|     `"cnn"`     |              [CNN](https://edition.cnn.com/)              |
+|     `"nyt"`     |      [The New York Times](https://www.nytimes.com/)       |
+| `"theguardian"` | [The Guardian](https://www.theguardian.com/international) |
