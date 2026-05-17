@@ -2,9 +2,7 @@
 
 Python package to fetch the latest news headlines from major news outlets by parsing their webpages.
 
-> ℹ️ Remarks
->
-> Every request is cached for 10 minutes before a new one is made.
+> ℹ️ Every response is cached for 10 minutes before a new request is made.
 
 ## Installation
 
@@ -28,7 +26,7 @@ A dataclass representing a single news headline.
 
 ### `newsheadlines.all(source_name)`
 
-Returns a list of `Headline` objects from the given source.
+Returns a list of all `Headline` objects from the given source.
 
 #### **Parameters**
 
@@ -46,7 +44,9 @@ import newsheadlines
 headlines = newsheadlines.all("bbc")
 
 for h in headlines:
-    print(h.title, h.url. h.source)
+    print(h.title)
+    print(h.url)
+    print(h.source)
 ```
 
 ### `newsheadlines.main(source_name)`
@@ -76,7 +76,7 @@ print(headline.source)
 ## Available sources
 
 | Key             | Source             |
-| --------------- | ------------------ |
+|:---------------:|:------------------:|
 | `"apnews"`      | AP News            |
 | `"bbc"`         | BBC News           |
 | `"cnn"`         | CNN                |
