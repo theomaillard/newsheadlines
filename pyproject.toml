@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "newsheadlines"
-version = "0.0.1"
+version = "0.0.2"
 description = "Latest news headlines fetcher from major sources"
 authors = [{ name = "Theo Maillard", email = "theomaillard11@gmail.com" }]
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 keywords = ["news", "headlines"]
 license = "MIT"
 license-files = [
