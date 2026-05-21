@@ -17,12 +17,18 @@ class CNN(Source):
         stacks = soup.find_all('div', class_="stack")
 
         # main headline
-        main_headline = stacks[1].select_one('.container__title_url-text')
-        link = stacks[1].select_one('.container__title-url')
-        title = clean_string(main_headline.get_text())
-        url = "https://edition.cnn.com/" + link.get("href")
-        headlines.append(Headline(title=title, source=self.name, url=url))
-
+        clickable_hl = stacks[1].select_one('.container__title_url-text')
+        if clickable_hl is not None:
+            link = stacks[1].select_one('.container__title-url')
+            title = clean_string(clickable_hl.get_text())
+            url = "https://edition.cnn.com/" + link.get("href")
+            headlines.append(Headline(title=title, source=self.name, url=url))
+        else:
+            main_headline = stacks[1].select_one('.container__title')
+            title = clean_string(main_headline.get_text())
+            url = None
+            headlines.append(Headline(title=title, source=self.name, url=url))
+        
         # LEFT stack
         containers = stacks[0].select(".container")
         for cont in containers:
@@ -30,8 +36,8 @@ class CNN(Source):
             for card in cards:
                 link = card.select_one("a.container__link")
                 # filter out videos headlines
-                if not link or link.get("data-link-type") == "video":
-                    continue
+                # if not link or link.get("data-link-type") == "video":
+                #     continue
 
                 title = card.select_one(".container__headline-text")
                 if title:
